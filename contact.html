@@ -22,7 +22,9 @@
 <p class="eyebrow">Contact</p>
 <h1>Let&apos;s build your next visual system</h1>
 <p>Share your goals, timeline, and references. I&apos;ll send back scope and pricing options.</p>
-<form class="contact-form" id="contactForm">
+<button class="btn btn-primary form-toggle" id="contactFormToggle" type="button" aria-expanded="false" aria-controls="contactFormPanel">Send a Message</button>
+<form class="contact-form" id="contactForm" action="https://formsubmit.co/el/dezopo" method="POST">
+<div class="contact-form-panel" id="contactFormPanel">
 <input type="hidden" name="_subject" value="New website inquiry">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_template" value="table">
@@ -52,8 +54,8 @@
 </button>
 <a class="btn btn-secondary" href="work.html">See Work First</a>
 </div>
-<p class="form-note" id="contactFormNote">Messages are sent directly to <strong>thegr8ric@gmail.com</strong>.</p>
 <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+</div>
 </form>
 </section>
 

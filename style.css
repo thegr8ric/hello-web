@@ -375,6 +375,7 @@ p {
 .btn-primary {
     background: var(--accent);
     color: #fff;
+    border: none;
 }
 
 .btn-secondary {
@@ -404,6 +405,7 @@ p {
     padding: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -440,6 +442,101 @@ p {
     text-decoration: none;
     color: var(--accent);
     font-weight: 700;
+}
+
+.project-card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.case-study .case-hero {
+    margin-top: 20px;
+    height: 210px;
+    border-radius: 16px;
+    border: 1px solid var(--stroke);
+}
+
+.case-actions {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.case-grid {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.case-card {
+    background: var(--surface);
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.case-card h3 {
+    font-size: 1.04rem;
+}
+
+.case-card p {
+    margin: 8px 0 0;
+}
+
+.case-subhead {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.design-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.design-tag {
+    border: 1px solid var(--stroke);
+    background: color-mix(in srgb, var(--accent-soft) 68%, var(--surface));
+    color: var(--text);
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 700;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.design-tag:hover,
+.design-tag:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.design-tag.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.design-info-panel {
+    margin-top: 12px;
+    background: var(--surface);
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.design-info-title {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.design-info-body {
+    margin: 8px 0 0;
 }
 
 .split {
@@ -547,6 +644,31 @@ p {
     margin-top: 20px;
     display: grid;
     gap: 14px;
+}
+
+.form-toggle {
+    margin-top: 14px;
+    border: none;
+}
+
+.contact-form-panel {
+    display: grid;
+    gap: 14px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(-10px) scale(0.99);
+    transform-origin: top center;
+    will-change: max-height, opacity, transform;
+    transition: max-height 0.62s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease, transform 0.35s ease;
+}
+
+.contact-form.is-open .contact-form-panel {
+    max-height: 1100px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
 }
 
 .form-honeypot {
@@ -731,6 +853,10 @@ html.js .reveal.in-view {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
     .split {
         grid-template-columns: 1fr;
     }
@@ -813,7 +939,9 @@ html.js .reveal.in-view {
     }
 
     .contact-form.is-sending .send-spinner,
-    .contact-form.is-success .send-btn {
+    .contact-form.is-success .send-btn,
+    .contact-form-panel {
         animation: none !important;
+        transition: none !important;
     }
 }

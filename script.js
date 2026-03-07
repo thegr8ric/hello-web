@@ -130,14 +130,38 @@
 
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        const toggleBtn = document.getElementById('contactFormToggle');
+        const firstField = document.getElementById('contactName');
         const statusEl = document.getElementById('contactFormStatus');
         const sendBtn = document.getElementById('contactSendBtn');
-        const endpoint = 'https://formsubmit.co/ajax/thegr8ric@gmail.com';
+        const endpoint = contactForm.getAttribute('action') || 'https://formsubmit.co/el/dezopo';
+        let isOpen = false;
+
+        function setOpenState(nextState, focusField) {
+            isOpen = !!nextState;
+            contactForm.classList.toggle('is-open', isOpen);
+            if (toggleBtn) {
+                toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                toggleBtn.textContent = isOpen ? 'Hide Message Form' : 'Send a Message';
+            }
+            if (isOpen && focusField && firstField) {
+                firstField.focus();
+            }
+        }
+
+        setOpenState(false, false);
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+                setOpenState(!isOpen, isOpen === false);
+            });
+        }
 
         contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
 
             if (!contactForm.checkValidity()) {
+                setOpenState(true, false);
                 contactForm.reportValidity();
                 return;
             }
@@ -157,10 +181,11 @@
                 if (!response.ok) {
                     throw new Error('Request failed');
                 }
-                return response.json();
+                return response.text();
             }).then(function () {
                 contactForm.classList.remove('is-sending');
                 contactForm.classList.add('is-success');
+                setOpenState(true, false);
                 if (statusEl) {
                     statusEl.textContent = 'Message sent successfully. I will get back to you soon.';
                 }
@@ -240,6 +265,57 @@
 
         el.addEventListener('mouseleave', function () {
             el.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+    });
+
+    const caseCards = document.querySelectorAll('.project-card[data-href]');
+    caseCards.forEach(function (card) {
+        const targetHref = card.getAttribute('data-href');
+        if (!targetHref) {
+            return;
+        }
+
+        card.addEventListener('click', function (event) {
+            if (event.target.closest('a, button')) {
+                return;
+            }
+            window.location.href = targetHref;
+        });
+
+        card.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                window.location.href = targetHref;
+            }
+        });
+    });
+
+    const designGroups = document.querySelectorAll('.design-tags');
+    designGroups.forEach(function (group) {
+        const panel = group.parentElement ? group.parentElement.querySelector('.design-info-panel') : null;
+        const titleEl = panel ? panel.querySelector('.design-info-title') : null;
+        const bodyEl = panel ? panel.querySelector('.design-info-body') : null;
+        const buttons = Array.from(group.querySelectorAll('.design-tag'));
+
+        function activateButton(btn) {
+            buttons.forEach(function (item) {
+                const isActive = item === btn;
+                item.classList.toggle('active', isActive);
+                item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+
+            if (titleEl) {
+                titleEl.textContent = btn.getAttribute('data-title') || btn.textContent || '';
+            }
+            if (bodyEl) {
+                bodyEl.textContent = btn.getAttribute('data-detail') || '';
+            }
+        }
+
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                activateButton(btn);
+            });
         });
     });
 })();

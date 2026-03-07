@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study | Noir Skin Lab</title>
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  var saved = localStorage.getItem('theme');
+  var mode = (saved === 'dark' || saved === 'light') ? saved : 'light';
+  document.documentElement.setAttribute('data-theme', mode);
+  document.documentElement.classList.add('js');
+})();
+</script>
+</head>
+<body data-page="work">
+<div id="site-header"></div>
+
+<main>
+<section class="section reveal page-content case-study">
+<p class="eyebrow">Case Study</p>
+<h1>Noir Skin Lab</h1>
+<p class="hero-copy">Packaging and campaign direction for a skincare brand releasing seasonal product drops and digital promos.</p>
+<div class="case-hero visual-3"></div>
+<div class="case-actions">
+<a class="btn btn-secondary" href="index.html">Back to Main Page</a>
+<a class="btn btn-primary" href="contact.html">Request Similar Project</a>
+</div>
+</section>
+
+<section class="section reveal page-content">
+<h2>Project Breakdown</h2>
+<p class="about-copy">This case focused on premium positioning through packaging hierarchy, campaign consistency, and quick-turn social ad adaptations for product drops.</p>
+<div class="case-grid">
+<article class="case-card">
+<h3>Challenge</h3>
+<p>Each product drop looked visually disconnected, making the brand feel inconsistent and harder to recognize at a glance.</p>
+</article>
+<article class="case-card">
+<h3>Solution</h3>
+<p>We defined a system for typography, color accents, and packaging structures that scaled across new launches without redesigning from scratch.</p>
+</article>
+<article class="case-card">
+<h3>Outcome</h3>
+<p>The brand gained a cohesive premium look and a faster workflow for both packaging updates and promotional campaign assets.</p>
+</article>
+</div>
+<h3 class="case-subhead">Design Info</h3>
+<div class="design-tags">
+<button type="button" class="design-tag active" aria-pressed="true" data-title="Packaging System" data-detail="Consistent label architecture and typographic hierarchy designed for quick drop-to-drop updates while preserving premium brand recognition.">Packaging System</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Art Direction" data-detail="Visual moodboards and shot direction balancing clean clinical cues with aspirational beauty positioning across campaigns.">Art Direction</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Launch Visuals" data-detail="Drop launch key visuals and countdown assets prepared for web banners, socials, and email announcements.">Launch Visuals</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Ad Adaptation" data-detail="A structured resizing and variation workflow for static and motion ad units to support multi-platform performance marketing.">Ad Adaptation</button>
+</div>
+<article class="design-info-panel reveal">
+<h4 class="design-info-title">Packaging System</h4>
+<p class="design-info-body">Consistent label architecture and typographic hierarchy designed for quick drop-to-drop updates while preserving premium brand recognition.</p>
+</article>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>

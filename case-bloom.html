@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study | Bloom Coffee Co.</title>
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  var saved = localStorage.getItem('theme');
+  var mode = (saved === 'dark' || saved === 'light') ? saved : 'light';
+  document.documentElement.setAttribute('data-theme', mode);
+  document.documentElement.classList.add('js');
+})();
+</script>
+</head>
+<body data-page="work">
+<div id="site-header"></div>
+
+<main>
+<section class="section reveal page-content case-study">
+<p class="eyebrow">Case Study</p>
+<h1>Bloom Coffee Co.</h1>
+<p class="hero-copy">A full identity refresh for a specialty coffee startup preparing to launch subscriptions and retail shelves.</p>
+<div class="case-hero visual-1"></div>
+<div class="case-actions">
+<a class="btn btn-secondary" href="index.html">Back to Main Page</a>
+<a class="btn btn-primary" href="contact.html">Request Similar Project</a>
+</div>
+</section>
+
+<section class="section reveal page-content">
+<h2>Project Breakdown</h2>
+<p class="about-copy">We rebuilt the visual identity around warmth, clarity, and consistency. Deliverables included logo lockups, packaging direction, social templates, and launch art direction for paid campaigns.</p>
+<div class="case-grid">
+<article class="case-card">
+<h3>Challenge</h3>
+<p>The previous look felt generic and inconsistent across packaging and digital touchpoints, reducing trust during the brand launch phase.</p>
+</article>
+<article class="case-card">
+<h3>Solution</h3>
+<p>A modular identity system with clear hierarchy, flexible layouts, and reusable social components that kept every channel aligned.</p>
+</article>
+<article class="case-card">
+<h3>Outcome</h3>
+<p>Stronger visual recognition, faster campaign production, and a polished brand rollout that felt premium from day one.</p>
+</article>
+</div>
+<h3 class="case-subhead">Design Info</h3>
+<div class="design-tags">
+<button type="button" class="design-tag active" aria-pressed="true" data-title="Brand Strategy" data-detail="Positioning centered on warmth, craft quality, and everyday clarity. We defined messaging pillars and visual cues for packaging, web, and social.">Brand Strategy</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Logo System" data-detail="Primary and secondary lockups, icon mark, and spacing rules built for labels, profile images, cups, and storefront usage.">Logo System</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Packaging Direction" data-detail="A structured front-label hierarchy with clear roast/product cues, plus shelf-ready variations for small and large format packs.">Packaging Direction</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Social Templates" data-detail="Reusable feed and story layouts with flexible copy modules to speed up launch posts and recurring campaign content.">Social Templates</button>
+</div>
+<article class="design-info-panel reveal">
+<h4 class="design-info-title">Brand Strategy</h4>
+<p class="design-info-body">Positioning centered on warmth, craft quality, and everyday clarity. We defined messaging pillars and visual cues for packaging, web, and social.</p>
+</article>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>

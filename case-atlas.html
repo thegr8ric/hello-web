@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study | Atlas Fit Studio</title>
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  var saved = localStorage.getItem('theme');
+  var mode = (saved === 'dark' || saved === 'light') ? saved : 'light';
+  document.documentElement.setAttribute('data-theme', mode);
+  document.documentElement.classList.add('js');
+})();
+</script>
+</head>
+<body data-page="work">
+<div id="site-header"></div>
+
+<main>
+<section class="section reveal page-content case-study">
+<p class="eyebrow">Case Study</p>
+<h1>Atlas Fit Studio</h1>
+<p class="hero-copy">Launch visuals for a boutique fitness studio focused on high-energy classes and modern coaching programs.</p>
+<div class="case-hero visual-2"></div>
+<div class="case-actions">
+<a class="btn btn-secondary" href="index.html">Back to Main Page</a>
+<a class="btn btn-primary" href="contact.html">Request Similar Project</a>
+</div>
+</section>
+
+<section class="section reveal page-content">
+<h2>Project Breakdown</h2>
+<p class="about-copy">The project combined campaign art direction with conversion-focused web sections. We created reusable launch assets for ads, social posts, landing pages, and in-studio materials.</p>
+<div class="case-grid">
+<article class="case-card">
+<h3>Challenge</h3>
+<p>The studio needed a bold launch identity that looked premium while still feeling approachable for new members.</p>
+</article>
+<article class="case-card">
+<h3>Solution</h3>
+<p>We built a high-contrast visual style, organized typography hierarchy, and a kit of campaign layouts for different offer periods.</p>
+</article>
+<article class="case-card">
+<h3>Outcome</h3>
+<p>The launch achieved strong local awareness and gave the team a repeatable design system for monthly promotions.</p>
+</article>
+</div>
+<h3 class="case-subhead">Design Info</h3>
+<div class="design-tags">
+<button type="button" class="design-tag active" aria-pressed="true" data-title="Campaign Design" data-detail="A launch campaign system built around urgency, social proof, and high-energy class storytelling for weekly promotional cycles.">Campaign Design</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Landing Page UI" data-detail="Offer-focused sections, stronger hierarchy, and conversion-first modules to improve trial signups and class package enquiries.">Landing Page UI</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Ad Creatives" data-detail="Modular ad sets for Meta placements with rapid headline/image swaps so the team could test offers without redesigning.">Ad Creatives</button>
+<button type="button" class="design-tag" aria-pressed="false" data-title="Print Assets" data-detail="Studio posters, schedule cards, and promo handouts aligned to digital visuals for consistent member-facing communication.">Print Assets</button>
+</div>
+<article class="design-info-panel reveal">
+<h4 class="design-info-title">Campaign Design</h4>
+<p class="design-info-body">A launch campaign system built around urgency, social proof, and high-energy class storytelling for weekly promotional cycles.</p>
+</article>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>
