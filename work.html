@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work | RiCreative</title>
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  var saved = localStorage.getItem('theme');
+  var mode = (saved === 'dark' || saved === 'light') ? saved : 'light';
+  document.documentElement.setAttribute('data-theme', mode);
+  document.documentElement.classList.add('js');
+})();
+</script>
+</head>
+<body data-page="work">
+<div id="site-header"></div>
+
+<main>
+<section class="section reveal">
+<p class="eyebrow">Portfolio</p>
+<h1>Recent Design Projects</h1>
+<p class="hero-copy">A mix of branding, social media systems, campaign work, and conversion-focused web visuals.</p>
+<div class="project-grid" style="margin-top: 28px;">
+<article class="project-card reveal" data-tilt>
+<div class="project-visual visual-1"></div>
+<h3>Bloom Coffee Co.</h3>
+<p>Identity refresh, packaging direction, and social rollout templates.</p>
+<a href="contact.html" class="project-link">Request similar project</a>
+</article>
+<article class="project-card reveal" data-tilt>
+<div class="project-visual visual-2"></div>
+<h3>Atlas Fit Studio</h3>
+<p>Launch campaign creative, promo print set, and microsite visuals.</p>
+<a href="contact.html" class="project-link">Request similar project</a>
+</article>
+<article class="project-card reveal" data-tilt>
+<div class="project-visual visual-3"></div>
+<h3>Noir Skin Lab</h3>
+<p>Packaging hierarchy, visual identity system, and ad-ready assets.</p>
+<a href="contact.html" class="project-link">Request similar project</a>
+</article>
+</div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>
+
+

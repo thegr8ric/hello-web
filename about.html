@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | RiCreative</title>
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  var saved = localStorage.getItem('theme');
+  var mode = (saved === 'dark' || saved === 'light') ? saved : 'light';
+  document.documentElement.setAttribute('data-theme', mode);
+  document.documentElement.classList.add('js');
+})();
+</script>
+</head>
+<body data-page="about">
+<div id="site-header"></div>
+
+<main>
+<section class="section reveal page-content">
+<p class="eyebrow">About</p>
+<h1>Strategy-led visuals for growing brands</h1>
+<p class="hero-copy">I combine design systems with clear messaging so your brand looks polished and stays consistent across every touchpoint.</p>
+<div class="stats" style="margin-top: 28px;">
+<div class="stat reveal" data-tilt>
+<span class="duo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="tone-a" cx="12" cy="12" r="10"></circle><path class="tone-b" d="M7 12h10v2H7zm0-4h10v2H7zm0 8h6v2H7z"></path></svg></span>
+<p class="stat-value">40+</p>
+<p class="stat-label">Projects delivered</p>
+</div>
+<div class="stat reveal" data-tilt>
+<span class="duo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="tone-a" cx="12" cy="12" r="10"></circle><path class="tone-b" d="M8 16l3-3 2 2 3-4 2 1-5 6-2-2-2 2z"></path></svg></span>
+<p class="stat-value">12</p>
+<p class="stat-label">Brand launches</p>
+</div>
+<div class="stat reveal" data-tilt>
+<span class="duo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="tone-a" cx="12" cy="12" r="10"></circle><path class="tone-b" d="M12 7a1 1 0 0 1 1 1v4l3 2-1 1-4-2.5V8a1 1 0 0 1 1-1z"></path></svg></span>
+<p class="stat-value">5 yrs</p>
+<p class="stat-label">Design experience</p>
+</div>
+</div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>
+
+

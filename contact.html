@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | RiCreative</title>
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  var saved = localStorage.getItem('theme');
+  var mode = (saved === 'dark' || saved === 'light') ? saved : 'light';
+  document.documentElement.setAttribute('data-theme', mode);
+  document.documentElement.classList.add('js');
+})();
+</script>
+</head>
+<body data-page="contact">
+<div id="site-header"></div>
+
+<main>
+<section class="section cta reveal page-content">
+<p class="eyebrow">Contact</p>
+<h1>Let&apos;s build your next visual system</h1>
+<p>Share your goals, timeline, and references. I&apos;ll send back scope and pricing options.</p>
+<form class="contact-form" id="contactForm">
+<input type="hidden" name="_subject" value="New website inquiry">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
+<div class="contact-grid">
+<label class="form-field">
+<span>Name</span>
+<input type="text" id="contactName" name="name" autocomplete="name" required>
+</label>
+<label class="form-field">
+<span>Email</span>
+<input type="email" id="contactEmail" name="email" autocomplete="email" required>
+</label>
+</div>
+<label class="form-field">
+<span>Project type</span>
+<input type="text" id="contactProject" name="project" placeholder="Brand identity, landing page, campaign assets..." required>
+</label>
+<label class="form-field">
+<span>Message</span>
+<textarea id="contactMessage" name="message" rows="5" placeholder="Tell me what you want to build, timeline, and any references." required></textarea>
+</label>
+<div class="hero-actions">
+<button class="btn btn-primary send-btn" type="submit" id="contactSendBtn">
+<span class="send-btn-text">Send Message</span>
+<span class="send-spinner" aria-hidden="true"></span>
+</button>
+<a class="btn btn-secondary" href="work.html">See Work First</a>
+</div>
+<p class="form-note" id="contactFormNote">Messages are sent directly to <strong>thegr8ric@gmail.com</strong>.</p>
+<p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+</form>
+</section>
+
+<section class="section reveal page-content">
+<p class="eyebrow">Socials</p>
+<div class="social-grid">
+<a class="social-link" href="https://www.linkedin.com/in/thegr8ric" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+<span class="social-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" role="img">
+<circle class="tone-b" cx="6.5" cy="6.5" r="1.5"></circle>
+<path class="tone-b" d="M5 9h3v10H5zM10 9h3v1.4A4 4 0 0 1 16 9a4 4 0 0 1 4 4v6h-3v-5.6A1.8 1.8 0 0 0 15.2 11 2.1 2.1 0 0 0 13 13.2V19h-3z"></path>
+</svg>
+</span>
+</a>
+<a class="social-link" href="https://www.instagram.com/thegr8ric" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram profile">
+<span class="social-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" role="img">
+<rect class="tone-b" x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+<circle cx="12" cy="12" r="3.6" fill="none" stroke="var(--surface)" stroke-width="1.8"></circle>
+<circle cx="17" cy="7.2" r="1.1" fill="var(--surface)"></circle>
+</svg>
+</span>
+</a>
+<a class="social-link" href="https://wa.me/254746872026" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp chat">
+<span class="social-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" role="img">
+<path class="tone-b" d="M12 3.8A8.2 8.2 0 0 0 5 16.4L4 20l3.8-1A8.2 8.2 0 1 0 12 3.8zm4.6 11.3c-.2.5-1 .9-1.4 1-.4.1-1 .2-3.1-.7a10.2 10.2 0 0 1-3.3-2.9c-.9-1.1-1.4-2.5-1.3-2.9.1-.4.6-1.1.9-1.3.2-.1.5-.1.7-.1h.5c.2 0 .4 0 .6.5l.8 1.8c.1.3.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.3.5 1.1 1.7 2.8 2.4.4.2.6.1.8-.1l.7-.8c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6z"></path>
+</svg>
+</span>
+</a>
+</div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
